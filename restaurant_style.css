@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+
+body {
+  background-image: url("./images/galaxy.jpg");
+  background-attachment: fixed;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template: auto / repeat(5, 1fr);
+  grid-gap: 10px;
+  padding: 30px 20px;
+}
+
+.nav-bar button {
+  background-color: purple;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.specials-grid {
+  display: grid;
+  grid-template: 50% 50% / 70% 30%;
+  grid-gap: 15px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.descriptions {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+  padding: 30px 20px;
+  grid-gap: 12px;
+  text-align: center;
+}
+
+.specials-a {
+  grid-area: 1 / 1 / span 2 / span 1;
+  background-image: url("./images/pancakes.jpg");
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  line-height: 40px;
+}
+
+.specials-a div {
+  background-color: purple;
+  color: white;
+  display: inline-block;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.special {
+  background-color: purple;
+  color: white;
+  padding: 50px 70px;
+  justify-self: center;
+  align-self: center;
+  line-height: 30px;
+}
+
+.specials-b {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.specials-c {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.descriptions div {
+  background-color: purple;
+  color: white;
+  padding: 20px;
+  line-height: 24px;
+}
+
+.owner-div {
+  width: 100%;
+  height: 400px;
+  background-color: purple;
+  color: white;
+  position: relative;
+}
+
+.owner-pic {
+  height: 400px;
+}
+
+.owner-div button {
+  background-color: white;
+  color: purple;
+  border: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 30px;
+  padding: 15px;
+}
+
+hr {
+  color: white;
+}
+
+.instagram {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  grid-gap: 20px;
+  padding: 30px;
+}
+
+.gallery-item {
+  height: 200px;
+  justify-self: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

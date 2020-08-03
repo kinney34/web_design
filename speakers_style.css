@@ -1,0 +1,48 @@
+.section {
+  width: 75%;
+  margin: auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.bio {
+  width: 60%;
+  display: inline-block;
+}
+
+.bio h3 {
+  color: #648880;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.bio h4 {
+  color: #a9b2b9;
+  font-weight: 400;
+}
+
+.bio p {
+  color: #888;
+  line-height: 24px;
+}
+
+.pic {
+  display: inline-block;
+  width: 40%;
+  float: right;
+  padding: 100px 30px 30px 30px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+}
+
+.pic p {
+  color: #648880;
+  text-align: center;
+  line-height: 24px;
+}

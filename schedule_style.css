@@ -1,0 +1,41 @@
+table {
+  width: 80%;
+  margin: 40px 0 40px 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  color: #a9b2b9;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 24px 0px;
+}
+
+td p {
+  color: #888;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.left {
+  text-align: right;
+  width: 20%;
+  padding-right: 40px;
+  font-size: 14px;
+}
+
+.bordered {
+  border-bottom: 1px solid #dfe2e5;
+  text-align: left;
+  width: 20%;
+}
+
+.green {
+  font-size: 20px;
+  color: #648880;
+}
+
+.title {
+  font-size: 24px;
+  color: #648880;
+}

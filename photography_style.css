@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main {
+  max-width: 916px;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 40vw;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+
+.inner-header h1 {
+  margin: auto;
+  font-size: 2.2em;
+  font-weight: 500;
+  padding-top: 5%;
+}
+
+.inner-header h3 {
+  margin: auto;
+  font-weight: 400;
+  color: hsl(0, 0%, 60%);
+  font-size: 1.2em;
+  line-height: 30px;
+}
+
+.inner-header button {
+  margin: 10% auto auto auto;
+  width: 30%;
+  font-weight: 400;
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 16px;
+  padding: 2%;
+  background-color: white;
+  font-size: .9em;
+}
+
+.image {
+  width: 100%;
+  height: 50vh;
+  background-image: url('./images/camera_1.jpg');
+  background-size: cover;
+  background-position: center;
+  flex: 0 1 60vw;
+}
+
+.divider {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.divider h3 {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding: 3vh;
+}
+
+.vl {
+  border-left: 1px dotted #fff;
+  display: inline-block;
+  height: 4vh;
+}
+
+img {
+  width: 100%;
+  height: 70vh;
+}
+
+.caption {
+  text-align: center;
+  background-color: #fff;
+  padding: 1.7rem;
+}
+
+.caption h3 {
+  background-color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 3vh;
+}
+
+.caption p {
+  background-color: #fff;
+  font-size: .9em;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  color: #333;
+}
+
+footer h1 {
+  font-size: 2.3em;
+  padding-top: 3vh;
+}
+
+footer p {
+  font-size: .9em;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    display: flex;
+    height: 100%;
+  }
+
+  .header {
+    height: 100vh;
+  }
+
+  .image {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 916px) {
+  body {
+    background-color: #eee;
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  .header {
+    width: 40%;
+    height: 100%;
+  }
+
+  .image {
+    width: 60%;
+    height: 100%;
+  }
+
+  .divider {
+    width: 916px;
+  }
+
+}

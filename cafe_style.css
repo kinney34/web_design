@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+#menu {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  opacity: 0.9;
+  visibility: hidden;
+  z-index: 10;
+  background-color: #111;
+  color: #eee;
+}
+
+#menu li {
+  height: 11vh;
+  font-size: 1.7em;
+  border-bottom: 1px solid #555;
+  padding: 3vh;
+}
+
+header {
+  text-align: center;
+  height: 45vh;
+}
+
+header h1 {
+  padding: 7vh;
+  font-size: 3em;
+}
+
+#menu-icon {
+  padding: 3vh;
+}
+
+#exit {
+  float: right;
+  color: #eee;
+  text-decoration: none;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.dot-container {
+  position: absolute;
+  top: 90%;
+  left: 40%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-animation fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+
+.main {
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  font-weight: 300;
+}
+
+.yellow-box {
+  background-color: #f1c40f;
+  border: 1px solid black;
+  color: black;
+  display: inline-block;
+  padding: 2vh;
+  text-decoration: none;
+  margin: 5vh;
+  line-height: 2em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.download {
+  color: #f1c40f;
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+}
+
+.main p {
+  width: 80%;
+  margin: auto;
+}
+
+.main h1 {
+  padding: 10vh 0 3vh 0;
+  font-weight: 300;
+  width: 80%;
+  margin: auto;
+}
+
+.main h4 {
+  width: 80%;
+  margin: auto;
+  font-size: 0.9em;
+  line-height: 2em;
+  font-weight: 300;
+}
+
+.photo {
+  width: 75%;
+  height: 25vh;
+  margin: 2vh;
+}
+
+@media only screen and (min-width: 768px) {
+  #menu-link {
+    visibility: hidden;
+    height: 0;
+    display: block;
+  }
+
+  #menu {
+    width: 30%;
+    height: 5vh;
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    background-color: white;
+    display: inline;
+  }
+
+  #menu li {
+    color: black;
+    background-color: white;
+    display: inline-block;
+    font-size: 1em;
+    border: none;
+    height: 1em;
+  }
+
+  #exit {
+    display: hidden;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  .slideshow-container {
+    height: 45vh;
+    width: 50vw;
+    margin: auto;
+  }
+
+  .dot-container {
+    left: 45%;
+  }
+
+  header h1 {
+    font-size: 4em;
+    padding-top: 8vh;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    float: left;
+  }
+}

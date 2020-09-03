@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.background {
+  position: fixed;
+  width: 70vw;
+  height: 80vh;
+  bottom: 2vh;
+  left: 10vw;
+  background-image: url('./images/photo_site_four.jpg');
+  background-size: cover;
+  filter: saturate(2);
+  z-index: -1;
+}
+
+.background-filter {
+  width: 70vw;
+  height: 80vh;
+  position: absolute;
+  opacity: 0.65;
+  background-color: #a6dcef;
+}
+
+.circle-one {
+  width: 75vh;
+  height: 75vh;
+  border-radius: 50%;
+  position: absolute;
+  top: 18vh;
+  left: 1vw;
+  background-color: #e36387;
+  -webkit-mask-image: radial-gradient(circle at bottom right, transparent 10%, black);
+}
+
+.circle-two {
+  width: 65vh;
+  height: 65vh;
+  border-radius: 50%;
+  position: absolute;
+  top: 18vh;
+  left: 25vw;
+  opacity: 0.7;
+  background-color: #f2aaaa;
+  box-shadow: inset -2px 4px 4px #e36387, inset -4px 2px 8px #e26387;
+}
+
+.foreground {
+  background-color: #aaa;
+  opacity: 0.2;
+  width: 96vw;
+  height: 96vh;
+  margin: 2vh auto;
+}
+
+.lower {
+  width: 100%;
+  height: 85vh;
+  background-color: #aaa;
+  opacity: 0.2;
+}
+
+.text-div {
+  width: 35vw;
+  position: absolute;
+  top: 35vh;
+  left: 55vw;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+h4 {
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.5rem;
+  letter-spacing: 2px;
+}
+
+h3 {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 165vh;
+  font-size: 2rem;
+  color: black;
+  opacity: 1;
+}

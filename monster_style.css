@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neutral: #faf4D0;
+  --medium-red: #c14545;
+  --bright-red: #ea4c4c;
+  --dark-red: #703b3b;
+}
+
+.content {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url('./aged-paper-design-space/86277.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.opaque {
+  opacity: 0.5;
+}
+
+header {
+  width: 100vw;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Rock Salt', cursive;
+  color: var(--dark-red);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 3vh;
+  padding: 5vh;
+}
+
+.grid-item {
+  border: 1px solid var(--dark-red);
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--medium-red);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.grid-item img {
+  position: absolute;
+  height: 25vh;
+  width: 263px;
+  opacity: 0.3;
+}
+
+.grid-item h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  align-self: center;
+  color: var(--neutral);
+  text-shadow: 1px 1px 3px black;
+  z-index: 2;
+}
+
+#selected {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--dark-red);
+  height: 80vh;
+  width: 90vw;
+  top: 10vh;
+  left: 5vw;
+  opacity: 1;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.exit {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 80vw;
+}
+
+.exit::before, .exit::after {
+  content: '';
+  background-color: black;
+  height: 20px;
+  width: 2px;
+  position: absolute;
+  left: 4vw;
+  top: 1vh;
+}
+
+.exit::before {
+  transform: rotate(45deg);
+}
+
+.exit::after {
+  transform: rotate(-45deg);
+}
+
+#selected img {
+  width: 40vw;
+  height: auto;
+  display: block;
+  margin: 2vh auto;
+  overflow: scroll;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#selected h1 {
+  font-family: 'Lora', serif;
+  color: var(--neutral);
+  text-align: center;
+}
+
+#selected h4 {
+  font-family: 'Lora', serif;
+  color: var(--neutral);
+  text-align: center;
+  font-style: italic;
+}
+
+#selected p {
+  font-family: 'Lora', serif;
+  color: var(--neutral);
+  text-align: left;
+  width: 90%;
+  margin: 4vh auto;
+  line-height: 1.5rem;
+}
+
+.reference {
+  font-family: 'Lora', serif;
+  color: var(--dark-red);
+  text-decoration: none;
+  text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .header h1 {
+    padding: 5vh;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .grid-item {
+    flex-basis: 250px;
+  }
+
+  .grid-item img {
+    width: 250px;
+  }
+
+  .exit {
+    left: 90%;
+    top: 2%;
+  }
+
+  .exit::before, .exit::after {
+    top: 1vh;
+    left: 2vw;
+  }
+
+  #selected {
+    width: 50%;
+    left: 25%;
+    min-height: 500px;
+    min-width: 350px;
+    max-width: 500px;
+    overflow-y: auto;
+  }
+
+  #selected img {
+    margin: 0;
+    max-width: 100px;
+    display: inline-block;
+    position: relative;
+    left: 8%;
+  }
+
+  .title-div {
+    display: inline-block;
+    position: relative;
+    left: 10%;
+    vertical-align: top;
+    padding-top: 3vh;
+    width: 30vw;
+  }
+
+  #selected h1 {
+    position: relative;
+    vertical-align: top;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  #selected h4 {
+    position: relative;
+    vertical-align: top;
+  }
+
+  #selected p {
+    width: 80%;
+  }
+}

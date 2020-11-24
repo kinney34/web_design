@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Castoro', serif;
+}
+
+:root {
+  --neutral: #fff4e3;
+  --black: #292725;
+  --medium: #ffcdab;
+}
+
+.parallax {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.text-block {
+  display: inline-block;
+  background-color: var(--black);
+  position: relative;
+  color: var(--neutral);
+  font-size: 1.2rem;
+  height: auto;
+}
+
+.text-block p {
+  width: 90%;
+  text-align: center;
+  margin: 3vh auto;
+  line-height: 2rem;
+}
+
+.parallax-title {
+  background-image: url('challah_title_pic.jpg');
+  height: 100vh;
+  opacity: 0.5;
+}
+
+.title-page {
+  position: absolute;
+  top: 30vh;
+  width: 40vw;
+  margin: 0 25vw;
+  padding: 4vh 0;
+  border: 1px solid var(--black);
+}
+
+.title-page h1 {
+  display: inline-block;
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+  color: var(--black);
+}
+
+.pic-one {
+  height: 120vh;
+}
+
+.pic-one::before {
+  content: '';
+  background-image: url('shabbat.jpg');
+  opacity: 0.5;
+  height: 120vh;
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.pic-two {
+  height: 120vh;
+  background-color: var(--black);
+}
+
+.circle-clip {
+  clip-path: circle(30% at 70% 50%);
+  background-image: url('anya.jpg');
+  height: 120vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: 60vh;
+  background-repeat: no-repeat;
+  background-position: 55vw;
+  background-color: var(--neutral);
+}
+
+.clip-wrap {
+  height: 120vh;
+  width: 100%;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+  position: relative;
+  float: right;
+  shape-outside: circle(30% at 70% 50%);
+}
+
+.book {
+  padding: 8vh 2vw;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--neutral);
+}
+
+.book a {
+  color: var(--neutral);
+}
+
+.instructions {
+  background-color: var(--neutral);
+  color: var(--black);
+  display: inline-block;
+}
+
+.recipe-title {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.recipe-text, .instructions ul, .instructions ol {
+  width: 85%;
+  margin: 0 auto;
+  line-height: 1.8rem;
+}
+
+.recipe-text a {
+  color: var(--black);
+}
+
+.braiding {
+  height: 120vh;
+  background-image: url('braid.jpg');
+}
+
+.proofing-wrapper {
+  height: 120vh;
+  background-color: var(--neutral);
+}
+
+.proofing {
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+  width: 30vw;
+  float: left;
+}
+
+.proofing-1 {
+  background-image: url('prove.jpg');
+  margin-left: 3vw;
+}
+
+.proofing-2 {
+  background-image: url('eggwash.jpg');
+  margin-left: 2vw;
+}
+
+.proofing-3 {
+  background-image: url('bake.jpeg');
+  margin-left: 2vw;
+}

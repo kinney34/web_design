@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+:root {
+  --neutral: #f4f4f2;
+  --color1: #158467;
+  --color2: #197163;
+  --color3: #065446;
+}
+
+.neutral { --rgb: 244, 244, 242; }
+.color1 { --rgb: 21, 132, 103; }
+.color2 { --rgb: 25, 113, 99; }
+.color3 { --rgb: 6, 84, 70; }
+*/
+
+:root {
+  --neutral: 244, 244, 242;
+  --color1: 21, 132, 103;
+  --color2: 25, 113, 99;
+  --color3: 6, 84, 70;
+}
+
+body {
+  background-color: rgba(var(--neutral), 1);
+  width: 90vw;
+  margin: auto;
+}
+
+.landing {
+  text-align: center;
+  top: 0;
+  height: 100vh;
+  padding: 5vh 5vw;
+  background-color: rgba(var(--neutral), 1);
+  z-index: 3;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header {
+  position: relative;
+}
+
+.header h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  line-height: 25vh;
+}
+
+.header p {
+  font-size: 2rem;
+  line-height: 8vh;
+}
+
+strong {
+  color: rgba(var(--color1), 1);
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 20vh;
+  text-align: center;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  width: 60vw;
+  margin: auto;
+  grid-gap: 5vh;
+}
+
+.grid-item {
+  height: 60vw;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+    0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.05);
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  position: relative;
+  top: 15vh;
+}
+
+.projectFrame {
+  position: absolute;
+  top: 5vh;
+  left: -15vw;
+  height: 90vh;
+  width: 90vw;
+  transform: scale(0);
+  transition: .3s ease;
+  animation-fill-mode: forwards;
+}
+
+.selectedProject {
+  transform: scale(1);
+}
+
+.colorone { background-color: rgba(var(--color1), 1); }
+.colorone:hover { background-color: rgba(var(--color1), .6); }
+
+.colortwo { background-color: rgba(var(--color2), 1); }
+.colortwo:hover { background-color: rgba(var(--color2), .6); }
+
+.colorthree { background-color: rgba(var(--color3), 1); }
+.colorthree:hover { background-color: rgba(var(--color3), 0.6); }
+
+@media only screen and (min-width: 500px) {
+  .landing {
+    position: relative;
+    text-align: left;
+  }
+
+  .header {
+    top: 20vh;
+  }
+
+  .header h1 {
+  }
+
+  .header p {
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3vw;
+    width: 72vw;
+  }
+
+  .grid-item {
+    height: 25vh;
+  }
+
+  .grid-item a {
+    top: 10vh;
+  }
+
+  .projectFrame {
+    height: 90vh;
+    width: 80vw;
+    left: -4vw;
+    top: -5vh;
+  }
+}

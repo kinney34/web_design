@@ -1,8 +1,20 @@
 var projectList = document.getElementsByClassName('grid-item');
 for (var i = 0; i < projectList.length; i++) {
-  projectList[i].addEventListener('click', handleClick);
+  projectList[i].addEventListener('click', handleOpen);
 }
 
-function handleClick() {
-  document.getElementsByClassName('projectFrame')[0].classList.add('selectedProject');
+document.getElementsByClassName('exit')[0].addEventListener('click', handleClose);
+
+function handleOpen() {
+  document.getElementsByClassName('frame-wrapper')[0].classList.add('selected-project');
+  for (var i = 0; i < projectList.length; i++) {
+    projectList[i].style.opacity = '0.5';
+  }
+}
+
+function handleClose() {
+  document.getElementsByClassName('frame-wrapper')[0].classList.remove('selected-project');
+  for (var i = 0; i < projectList.length; i++) {
+    projectList[i].style.opacity = '1';
+  }
 }

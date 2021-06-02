@@ -20,6 +20,7 @@
 
 :root {
   --neutral: 244, 244, 242;
+  --neutral1: 230, 230, 228;
   --color1: 21, 132, 103;
   --color2: 25, 113, 99;
   --color3: 6, 84, 70;
@@ -29,6 +30,18 @@ body {
   background-color: rgba(var(--neutral), 1);
   width: 90vw;
   margin: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(var(--neutral1), 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color3), 1);
 }
 
 .landing {
@@ -64,8 +77,9 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  line-height: 20vh;
-  text-align: center;
+  margin: 10vh;
+  padding: 0 0 10px 10px;
+  border-bottom: 1px solid black;
 }
 
 .grid-container {
@@ -80,45 +94,111 @@ h2 {
   height: 60vw;
   text-align: center;
   border-radius: 4px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+  /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
     0 2px 2px rgba(0, 0, 0, 0.2),
     0 4px 4px rgba(0, 0, 0, 0.15),
     0 8px 8px rgba(0, 0, 0, 0.1),
-    0 16px 16px rgba(0, 0, 0, 0.05);
+    0 16px 16px rgba(0, 0, 0, 0.05);*/
+  transition: .3s ease;
+  animation-fill-mode: forwards;
+  background-color: rgba(var(--neutral1), 1);
 }
 
-.grid-item a {
+.grid-item:hover {
+  background-color: rgba(var(--neutral), 1);
+  transform: scale(1.05);
+}
+
+.border {
+  height: 40vw;
+  width: 70%;
+  margin: 10vw 15%;
+  border-radius: 3px;
+  position: relative;
+  background-color: rgba(var(--neutral), 1);
+  /*box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px 4px rgba(0, 0, 0, 0.1);*/
+}
+
+.grid-link {
   text-decoration: none;
-  color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
   position: relative;
   top: 15vh;
+  font-size: 1.2rem;
 }
 
-.projectFrame {
-  position: absolute;
+.textone { color: rgba(var(--color1), 1); }
+.texttwo { color: rgba(var(--color2), 1); }
+.textthree { color: rgba(var(--color3), 1); }
+
+.frame-wrapper {
+  position: fixed;
   top: 5vh;
-  left: -15vw;
+  left: 5vw;
   height: 90vh;
   width: 90vw;
   transform: scale(0);
   transition: .3s ease;
   animation-fill-mode: forwards;
+  background-color: white;
 }
 
-.selectedProject {
+.project-frame {
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+    0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 4px rgba(0, 0, 0, 0.15),
+    0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.selected-project {
   transform: scale(1);
 }
 
-.colorone { background-color: rgba(var(--color1), 1); }
-.colorone:hover { background-color: rgba(var(--color1), .6); }
+.exit {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  left: 80vw;
+  top: -3vh;
+  border-radius: 50%;
+  background-color: rgba(var(--neutral), 1);
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 rgba(var(--color3), 0.15),
+    0 0 4px 0 rgba(var(--color3), 0.2),
+    0 0 8px 0 rgba(var(--color3), 0.25),
+    0 0 16px 0 rgba(var(--color3), 0.3),
+    0 0 32px 0 rgba(var(--color3), 0.35);
+}
 
-.colortwo { background-color: rgba(var(--color2), 1); }
-.colortwo:hover { background-color: rgba(var(--color2), .6); }
+.exit::before, .exit::after {
+  content: '';
+  background-color: rgba(var(--color3), 1);
+  height: 30px;
+  width: 4px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px
+}
 
-.colorthree { background-color: rgba(var(--color3), 1); }
-.colorthree:hover { background-color: rgba(var(--color3), 0.6); }
+.exit::before {
+  transform: rotate(45deg);
+}
+
+.exit::after {
+  transform: rotate(-45deg);
+}
+
+.colorone { border: 3px solid rgba(var(--color1), 1); }
+.colortwo { border: 3px solid rgba(var(--color2), 1); }
+.colorthree { border: 3px solid rgba(var(--color3), 1); }
 
 @media only screen and (min-width: 500px) {
   .landing {
@@ -137,23 +217,48 @@ h2 {
   }
 
   .grid-container {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 3vw;
     width: 72vw;
   }
 
   .grid-item {
     height: 25vh;
+    min-width: 150px;
   }
 
-  .grid-item a {
-    top: 10vh;
+  .border {
+    height: 15vh;
+    width: 70%;
+    margin: 5vh 15%;
   }
 
-  .projectFrame {
+  .grid-link {
+    top: 9vh;
+  }
+
+  .frame-wrapper {
+    position: absolute;
     height: 90vh;
     width: 80vw;
     left: -4vw;
     top: -5vh;
+  }
+
+  .exit {
+    left: 82vw;
+    top: -5vh;
+    height: 50px;
+    width: 50px;
+  }
+
+  .exit::before, .exit::after {
+    top: 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
